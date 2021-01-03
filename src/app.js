@@ -3,6 +3,7 @@ const express= require('express') //express here is actually a function
 const hbs= require('hbs')
 const forecast=require("./utils/forecast")
 const app=express()
+const port=process.env.PORT || 3000
 // console.log(__dirname)
 // console.log(path.join(__dirname,"../public"))
 //console.log(__filename)
@@ -89,8 +90,8 @@ app.get('*',(req,res)=>{
         name:'Shruti Mathews'
     })
 })
-app.listen(3000,()=>{
-    console.log('server is up at port 3000')
+app.listen(port,()=>{
+    console.log(`server is up at port ${port}`)
 }) 
 //listen to the port
 //starting the server is a asynchronous process
