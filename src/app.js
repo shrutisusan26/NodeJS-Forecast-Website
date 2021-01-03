@@ -59,7 +59,10 @@ app.get('/weather',(req,res)=>{
          res.send({
          forecast:data.forecast,
          temperature:data.temperature,
-         address:data.address
+         address:data.address,
+         temp_min:data.temp_min,
+         temp_max:data.temp_max
+
         })
         
      })

@@ -12,7 +12,8 @@ const forecast= (location,callback)=>{
         }
         else{//if response is going to be populated then error will be empty
             
-            callback(undefined, { address : body.name, temperature : body.main.temp,forecast: body.weather[0].description})
+            callback(undefined, { address : body.name, temperature : body.main.temp,forecast: body.weather[0].description,temp_min: body.main.temp_min,
+            temp_max: body.main.temp_max})
         }
     })
 }
